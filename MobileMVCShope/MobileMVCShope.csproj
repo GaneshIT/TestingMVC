@@ -133,6 +133,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\mobile.cs">
+      <DependentUpon>sales.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MobileDbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,6 +150,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MobileDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sale.cs">
+      <DependentUpon>sales.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sales.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sales.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sales.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sales.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\tblMobile.cs">
       <DependentUpon>MobileDbModel.tt</DependentUpon>
@@ -172,6 +193,16 @@
       <DependentUpon>MobileDbModel.edmx</DependentUpon>
       <LastGenOutput>MobileDbModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\sales.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>sales.edmx</DependentUpon>
+      <LastGenOutput>sales.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\sales.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>sales.edmx</DependentUpon>
+      <LastGenOutput>sales.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\MobileDbModel.edmx">
@@ -180,6 +211,13 @@
     </EntityDeploy>
     <Content Include="Models\MobileDbModel.edmx.diagram">
       <DependentUpon>MobileDbModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\sales.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>sales.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\sales.edmx.diagram">
+      <DependentUpon>sales.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
