@@ -15,23 +15,10 @@ namespace MobileMVCShope.Controllers
         {
             return View();
         }
-        public ActionResult Addsales(sale _addsale)
-        {
-            dotnetEntities.sales.Add(_addsale);
-            dotnetEntities.SaveChanges();
-            return View();
-        }
         public ActionResult Edit(int id)
         {
             var salesentity=dotnetEntities.sales.Find(id);
             return View(salesentity);
-        }
-        [HttpPost]
-        public ActionResult Edit(sale _sale)
-        {
-            dotnetEntities.Entry(_sale).State=System.Data.Entity.EntityState.Modified;
-            dotnetEntities.SaveChanges();
-            return View();
         }
     }
 }
