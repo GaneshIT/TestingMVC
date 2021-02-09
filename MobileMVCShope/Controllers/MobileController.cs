@@ -10,7 +10,6 @@ namespace MobileMVCShope.Controllers
 {
     public class MobileController : Controller
     {
-
         //Database object creation
         MobileEntities mobileEntities = new MobileEntities();
         // GET: Mobile
