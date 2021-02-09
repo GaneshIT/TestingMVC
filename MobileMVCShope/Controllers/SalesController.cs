@@ -11,7 +11,7 @@ namespace MobileMVCShope.Controllers
     {
         // GET: Sales
         dotnetEntities dotnetEntities = new dotnetEntities();
-        public ActionResult Index()
+        public ActionResult Addsales()
         {
             return View(dotnetEntities.sales.ToList());
         }
