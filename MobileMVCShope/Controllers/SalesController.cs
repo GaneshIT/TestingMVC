@@ -15,6 +15,12 @@ namespace MobileMVCShope.Controllers
         {
             return View();
         }
+        [Httppost]
+        public ActionResult Addsales(sale sale)
+        {
+            var data=dotnetEntities.sales.Add(sale);
+            return view(data);
+        }
         public ActionResult Edit(int id)
         {
             var salesentity=dotnetEntities.sales.Find(id);
