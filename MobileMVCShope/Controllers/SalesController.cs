@@ -13,7 +13,13 @@ namespace MobileMVCShope.Controllers
         dotnetEntities dotnetEntities = new dotnetEntities();
         public ActionResult Addsales()
         {
-            return View(dotnetEntities.sales.ToList());
+            return View();
+        }
+        public ActionResult Addsales(sale _addsale)
+        {
+            dotnetEntities.sales.Add(_addsale);
+            dotnetEntities.SaveChanges();
+            return View();
         }
         public ActionResult Edit(int id)
         {
